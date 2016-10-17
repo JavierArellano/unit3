@@ -9,16 +9,27 @@ function ale(){
     return aleat;
 }
 
-function orde(list){
-    list.sort(function(a,b){
+function orde(lista){
+    lista.sort(function(a,b){
         return a%2 - b%2 || a - b;
     })
+    return lista;
 }
 
 function paresImpares(){
     let arra = new Array(100);
-    for (i=0,i>100,i++){
-        arra.push(ale())};
-    orde(arra);
+    for (i=0;i<100;i++){
+        arra[i] = ale()};
+    let listaOrdenada = orde(arra);
+    imprimir(listaOrdenada);
 }
 
+function imprimir(lista){
+    for (numero of lista){
+        document.write(numero + '<br>');
+        /*let po = document.getElementById('pio');
+        po.innerHTML = numero;*/
+    }
+}
+
+window.onload = paresImpares();
