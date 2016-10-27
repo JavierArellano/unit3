@@ -149,3 +149,66 @@ window.onload = function(){
     var reem = reemplazar(arra,1,nueva);
     document.getElementById('pio').innerHTML = reem;
 }*/
+
+function buscaNombre(lista){
+    var li = lista.map(algo);
+    li.sort();
+    return li;
+}
+function checkJ(nomb){
+    return nomb.includes('J');
+}
+function algo(nombre){
+    var lista = []
+    if (checkJ(nombre[0])){
+        var contenido = 'J' + nombre[1][0];
+        lista.unshift(contenido);
+        return lista;
+    }
+}
+
+
+
+
+window.onload = function(){
+    var nombres = [['Pepe','Perez'],['Alfredo','Jimenez'],['Lucas','Rodriguez'],['Jose','Sanchez'],['Alva','Jeronimo'],['Juan','Palomo'],['Javi','Arellano']];
+    
+    var reem = buscaNombre(nombres);
+    for (elem of reem){
+        if (elem != undefined){
+        document.write(elem + '<br>');
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
